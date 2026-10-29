@@ -7,6 +7,7 @@ import { IoMdTime } from "react-icons/io";import { TbProgressCheck } from "react
 import { GrStatusGood } from "react-icons/gr";
 import { IoSettingsOutline } from "react-icons/io5";
 import { SlEnergy } from "react-icons/sl";
+import { FaTrash } from "react-icons/fa";
 
 
 import Link from "next/link";
@@ -24,6 +25,9 @@ const linkss = [
     {
         hreff: "/dashboard/settings", labell: "Settings", icon: <IoSettingsOutline />
     },
+    {
+        hreff: "/dashboard/trash", labell:"Recycle Bin", icon: <FaTrash />
+    }
 ];
 
 export default function Sidebar() {
@@ -31,7 +35,7 @@ export default function Sidebar() {
     const pathname = usePathname();
 
     return (
-        <aside className="w-60 h-[130vh] left-0 top-0 overflow-y-auto bg-[#dddee2] text-white p-6 flex flex-col  fixed text-xs">
+        <aside className="w-60 h-screen hide-scrollbar left-0 top-0 overflow-y-auto bg-[#dddee2] text-white p-6 flex flex-col  fixed text-xs">
             <div className="flex gap-2 ">
                 <div className="w-8 h-8 bg-[linear-gradient(135deg,#a69aff,#6558dd)] text-white border border-[#6558dd] flex justify-center items-center rounded-[10px] tracking-widest"><LuSparkles size={20} /></div>
                 <h2 className="text-xl text-[#181a24] font-bold mb-6">TASKFLOW</h2>
